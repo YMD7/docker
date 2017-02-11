@@ -1,12 +1,15 @@
 FROM ruby:2.4.0
 
-RUN gem update && \
-    gem install --no-ri --no-rdoc rails -v 4.0.5 && \
-    gem install bundler && \
-    rails -v
+ENV WORK /usr/src/work_for_rails
 
-COPY Gemfile $APP_ROOT
-COPY Gemfile.lock $APP_ROOT
+WORKDIR $WORK
+
+COPY Gemfile $WORK
+COPY Gemfile.lock $WORK
+
+RUN \
+  echo 'install: --no-document' >> ~/.gemrc && \
+	echo 'update: --no-document' >> ~/.gemrc
 
 RUN bundle install
 
