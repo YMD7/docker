@@ -1,11 +1,7 @@
 FROM ruby:2.4.0
 
-ENV APP_ROOT /usr/src/project_name
-
-WORKDIR $APP_ROOT
-
 RUN gem update && \
-    gem install --no-ri --no-rdoc rails && \
+    gem install --no-ri --no-rdoc rails -v 4.0.5 && \
     gem install bundler && \
     rails -v
 
