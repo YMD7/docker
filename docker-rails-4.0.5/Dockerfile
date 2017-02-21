@@ -1,6 +1,6 @@
 FROM ruby:2.4.0
 
-ENV WORK /usr/src/work_for_rails
+ENV WORK /usr/src/rails
 
 WORKDIR $WORK
 
