@@ -1,15 +1,16 @@
 FROM ruby:2.4.0
 
-ENV WORK /usr/src/rails
+ENV APP_ROOT /usr/src/sewingbooks
 
-WORKDIR $WORK
-
-COPY Gemfile $WORK
-COPY Gemfile.lock $WORK
+WORKDIR $APP_ROOT
 
 RUN \
   echo 'install: --no-document' >> ~/.gemrc && \
 	echo 'update: --no-document' >> ~/.gemrc
 
+COPY . /usr/src/sewingbooks
+
 RUN bundle install
+
+EXPOSE 3000
 
