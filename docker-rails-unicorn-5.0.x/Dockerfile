@@ -1,6 +1,6 @@
 FROM ruby:2.4.0
 
-ENV APP_ROOT /usr/src/docker_rails
+ENV APP_ROOT /usr/src/app
 
 WORKDIR $APP_ROOT
 
