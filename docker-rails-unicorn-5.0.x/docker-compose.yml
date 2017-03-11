@@ -20,3 +20,9 @@ services:
       - .:/usr/src/app
     volumes_from:
       - data
+      - bundle
+  bundle:
+    image: busybox
+    volumes:
+      - /usr/src/app/vendor/bundle
+
