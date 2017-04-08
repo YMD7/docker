@@ -1,7 +1,7 @@
 FROM centos:7
 
 RUN yum -y update
-RUN yum -y install git
+RUN yum -y install git which sudo vim-enhanced
 
 # Dependencies for [ruby-build]
 RUN yum -y install bzip2 gcc make openssl-devel readline-devel zlib-devel
