@@ -18,4 +18,5 @@ RUN \
   echo 'update: --no-document' >> ~/.gemrc && \
   bundle config --global build.nokogiri --use-system-libraries && \
   bundle config --global jobs 4 && \
+  bundle config --global path vendor/bundle && \
   bundle install
