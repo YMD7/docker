@@ -1,10 +1,6 @@
-FROM centos:7
+FROM ymd7/centos7-vim-dein
 
 RUN yum -y update
-RUN yum -y install git which sudo vim-enhanced
-
-# Dependencies for [ruby-build]
-RUN yum -y install bzip2 gcc make openssl-devel readline-devel zlib-devel
 
 # Install [rbenv] [ruby-build]
 ENV PATH /root/.rbenv/bin:$PATH

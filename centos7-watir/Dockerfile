@@ -11,4 +11,3 @@ RUN tar xf phantomjs-2.1.1-linux-x86_64.tar.bz2
 RUN cp phantomjs-2.1.1-linux-x86_64/bin/phantomjs /usr/local/bin/
 RUN yum -y install fontconfig-devel
 RUN phantomjs -v
-
