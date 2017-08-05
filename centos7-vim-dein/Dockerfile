@@ -38,5 +38,8 @@ WORKDIR /root
 RUN git clone https://github.com/YMD7/dotfiles.git
 RUN mv dotfiles/.vimrc . && rm -rf dotfiles/
 
+# Setting Locale
+RUN localedef -i ja_JP -c -f UTF-8 -A /usr/share/locale/locale.alias ja_JP.UTF-8
+ENV LANG ja_JP.UTF-8
 
 WORKDIR /root
