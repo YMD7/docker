@@ -1,4 +1,4 @@
-FROM ymd7/centos7-vim-dein
+FROM ymd7/centos7-vim-dein:installed-plugins
 
 RUN yum -y update
 
