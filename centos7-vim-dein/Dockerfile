@@ -38,6 +38,11 @@ WORKDIR /root
 RUN git clone https://github.com/YMD7/dotfiles.git
 RUN mv dotfiles/.vimrc . && rm -rf dotfiles/
 
+######
+# dein needs to open itself to install its plugins.
+# You can use ymd7/centos7-vim-dein:installed-plugins
+######
+
 # Setting Locale
 RUN localedef -i ja_JP -c -f UTF-8 -A /usr/share/locale/locale.alias ja_JP.UTF-8
 ENV LANG ja_JP.UTF-8
