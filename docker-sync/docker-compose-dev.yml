@@ -1,0 +1,10 @@
+version: '2'
+
+volumes:
+  hoge-volume:
+    external: true
+
+services:
+  app:
+    volumes:
+      - hoge-volume:/var/test
