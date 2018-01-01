@@ -17,7 +17,7 @@ RUN \
   wget https://dl.yarnpkg.com/rpm/yarn.repo -O /etc/yum.repos.d/yarn.repo
 
 RUN \
-  yum -y install nodejs yarn sqlite-devel && \
+  yum -y install nodejs yarn sqlite-devel postgresql-devel && \
   yum -y install libjpeg-devel libpng-devel && \
   yum -y install ImageMagick ImageMagick-devel
 
