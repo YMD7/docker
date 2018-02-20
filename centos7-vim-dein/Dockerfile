@@ -30,8 +30,11 @@ WORKDIR /root/.vim
 RUN mkdir dein
 RUN curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 RUN sh ./installer.sh ~/.vim/dein
+RUN mkdir colors
 RUN git clone https://github.com/cdmedia/itg_flat_vim.git
-RUN mv itg_flat_vim/colors/ . && rm -rf itg_flat_vim
+RUN mv itg_flat_vim/colors/* colors/. && rm -rf itg_flat_vim
+RUN git clone https://github.com/chriskempson/vim-tomorrow-theme.git
+RUN mv vim-tomorrow-theme/colors/* colors/. && rm -rf vim-tomorrow-theme
 
 # .vimrc
 WORKDIR /root
